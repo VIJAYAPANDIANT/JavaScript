@@ -1,3 +1,9 @@
+/*
+var -> Variable(Declare variable)(Global Scope)(Can be re-declared)(Can be updated)(Can be initialized at the time of declaration)(Hoisting)
+let -> Let(Declare variable)(Block Scope)( Can be re-declared)(Can be updated)(Can't be initialized at the time of declaration)(Hoisting)
+const -> Constant(Declare constant)(Block Scope)(Can't be re-declared)(Can't be updated)(Must be initialized at the time of declaration)(Hoisting)
+*/
+
 var a = 10;
 var b = 20;
 var c = 30;
@@ -39,14 +45,35 @@ console.log(r); // 400
 var r=500;
 console.log(r); // 500
 
-/*let s=600;
+/*
+let s=600;
 console.log(s); // 600
 let s=700;
 console.log(s); // SyntaxError: Identifier 's' has already been declared
 */
 
-/*const t=800;
+/*
+const t=800;
 console.log(t); // 800
 const t=900;
 console.log(t); // SyntaxError: Identifier 't' has already been declared
 */
+
+/*
+let u=1000;
+let u=2000;
+console.log(u); // 2000
+*/
+
+/*
+const v=3000;
+const v=4000;
+console.log(v); // SyntaxError: Identifier 'v' has already been declared 
+*/  
+
+var w=5000;
+var w=6000;
+console.log(w); // 6000 
+
+
+
