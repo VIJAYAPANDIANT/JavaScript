@@ -74,6 +74,3 @@ console.log(v); // SyntaxError: Identifier 'v' has already been declared
 var w=5000;
 var w=6000;
 console.log(w); // 6000 
-
-
-
