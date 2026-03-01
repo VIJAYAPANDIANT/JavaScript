@@ -6,7 +6,7 @@ Multi line comment
 
 /**
  * Multi line comment
- */
+*/
 
 //a+b=10; console.log(a+b);  //10
 
