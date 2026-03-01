@@ -1,5 +1,7 @@
 console.log("Hello World"); // Hello World  
 
+console.log("Hello JavaScript"); // Hello JavaScript
+
 //run in terminal
 //node "Hello World.js"
 
