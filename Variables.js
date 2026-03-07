@@ -74,3 +74,30 @@ console.log(v); // SyntaxError: Identifier 'v' has already been declared
 var w=5000;
 var w=6000;
 console.log(w); // 6000 
+
+let r=10;{
+    console.log(r); // 10
+}
+console.log(r); // 10
+
+var x=10;{
+    console.log(x); // 10
+}
+console.log(x); // 10
+
+const y=10;{
+    console.log(y); // 10
+}
+console.log(y); // 10
+
+console.log(s); // undefined
+let s=100
+console.log(s); // 50
+
+console.log(t); // ReferenceError: t is not defined
+var t=200;
+console.log(t); // 200  
+
+console.log(u); //ReferenceError: u is not defined
+const u=300;
+console.log(u); // 300

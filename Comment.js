@@ -1,3 +1,7 @@
+//Comments
+
+//Comments are used to explain the code. It is not executed by the browser.
+
 // Single line comment
 
 /*
