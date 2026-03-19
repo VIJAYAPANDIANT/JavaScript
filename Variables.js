@@ -101,3 +101,85 @@ console.log(t); // 200
 console.log(u); //ReferenceError: u is not defined
 const u=300;
 console.log(u); // 300
+
+let a=10;
+console.log(a); // 10
+{
+    let a=20;
+    console.log(a); // 20
+}
+console.log(a); // 10
+
+const a=10;
+console.log(a); // 10
+{
+    const a=20;
+    console.log(a); // 20
+}
+console.log(a); // 10
+
+var a=10;
+console.log(a); // 10
+{
+    var a=20;
+    console.log(a); // 20
+}
+console.log(a); // 20
+
+//Block Scope
+
+//Block scope is a scope that is limited to a block of code. It is a block of code that is enclosed in curly braces.
+
+//Block scope is a scope that is limited to a block of code. It is a block of code that is enclosed in curly braces.
+
+//Example
+
+// let a=10;
+// console.log(a); // 10
+// {
+//     let a=20;
+//     console.log(a); // 20
+// }
+// console.log(a); // 10
+
+//Global Scope
+
+//Global scope is a scope that is limited to a block of code. It is a block of code that is enclosed in curly braces.
+
+//Example
+
+// var a=10;
+// console.log(a); // 10
+// {
+//     var a=20;
+//     console.log(a); // 20
+// }
+// console.log(a); // 20
+
+//Local Scope
+
+//Local scope is a scope that is limited to a block of code. It is a block of code that is enclosed in curly braces.
+
+//Example
+
+// let a=10;
+// console.log(a); // 10
+// {
+//     let a=20;
+//     console.log(a); // 20
+// }
+// console.log(a); // 10
+
+//Function Scope
+
+//Function scope is a scope that is limited to a block of code. It is a block of code that is enclosed in curly braces.
+
+//Example
+
+// let a=10;
+// console.log(a); // 10
+// {
+//     let a=20;
+//     console.log(a); // 20
+// }
+// console.log(a); // 10
