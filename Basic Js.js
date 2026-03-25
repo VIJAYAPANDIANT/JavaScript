@@ -34,6 +34,8 @@ console.log("Hello World"); // Hello World
 
 console.log("Hello JavaScript"); // Hello JavaScript
 
+//Run Process
+
 //It's run in terminal and browser(Right click->inspect->console)
 
 //run in terminal
