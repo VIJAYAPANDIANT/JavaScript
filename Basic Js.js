@@ -1,5 +1,13 @@
 //Js
 
+//History
+
+//Js was created by Brendan Eich in 1995.
+//It was originally called Mocha, then LiveScript, and finally JavaScript.
+//It was created to make web pages interactive.
+
+//Definition
+
 //Js define as the scripting language.It is used to make web pages interactive.
 //It is a high-level language. It is a dynamically typed language. It is a interpreted language. 
 //It is a object-oriented language. It is a functional language. It is a prototype-based language. 
@@ -9,9 +17,11 @@
 
 
 //Key points
+
 //Js using to build dynamic web pages like to combine html css js ts and many more(web development)
 
 //syntax
+
 console.log("Hello World"); // Hello World
 
 //Hello World
