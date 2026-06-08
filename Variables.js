@@ -30,6 +30,18 @@ Initialization   | Not required during decl.    | Not required during decl.    |
 2. Function Scope: Variables declared with `var` inside a function are local to that function.
 3. Block Scope: Variables declared with `let` or `const` inside `{ ... }` (like if statements or loops) 
    are accessible only inside that block.
+
+================================================================================
+4. SYNTAX REFERENCE
+================================================================================
+// Declaring mutable variable (block-scoped)
+let variableName = value;
+
+// Declaring immutable constant (block-scoped)
+const CONSTANT_NAME = value;
+
+// Declaring mutable variable (function-scoped, legacy)
+var legacyVar = value;
 */
 
 

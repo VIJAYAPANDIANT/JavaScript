@@ -12,6 +12,22 @@ Key Tooling Concepts:
 2. Babel (JavaScript Compiler for backward compatibility)
 3. Webpack (Module Bundler)
 4. Vite (Modern, lightning-fast build tool)
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// npm commands
+npm init -y
+npm install packageName
+npm install --save-dev packageName
+npm uninstall packageName
+npm run scriptName
+
+// Vite Configuration (vite.config.js)
+import { defineConfig } from "vite";
+export default defineConfig({
+  // configs
+});
 */
 
 

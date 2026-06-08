@@ -12,6 +12,27 @@ Key Core Structures:
 1. Basic Types (Type Annotations)
 2. Interfaces (Defining Object structures)
 3. Generics (Reusable, type-parameterized components)
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Variable Type Annotation
+let name: string = "Vijay";
+let list: number[] = [1, 2, 3];
+let union: string | number = 42;
+
+// Interface
+interface User {
+    readonly id: number;
+    name: string;
+    email?: string;
+}
+
+// Type Alias
+type Point = { x: number; y: number; };
+
+// Generic Function
+function identity<T>(arg: T): T { return arg; }
 */
 
 

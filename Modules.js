@@ -15,6 +15,19 @@ How Modules Work:
 There are two types of exports/imports:
 - Named Exports (multiple per file)
 - Default Exports (only one per file)
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Exporting in module file
+export const myVar = 10;
+export function myFunc() { ... }
+export default class MyClass { ... }
+
+// Importing in destination file
+import MyClass, { myVar, myFunc } from "./module.js";
+import { myVar as aliasVar } from "./module.js";
+import * as ModuleNamespace from "./module.js";
 */
 
 

@@ -12,6 +12,26 @@ Key Vulnerabilities & Defenses:
 1. XSS (Cross-Site Scripting)
 2. Sanitization (Defense against XSS)
 3. CSRF (Cross-Site Request Forgery)
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Basic escaping function
+function escapeHTML(str) {
+    return str.replace(/[&<>'"]/g, tag => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        "'": '&#39;',
+        '"': '&quot;'
+    }[tag] || tag));
+}
+
+// Safer DOM assignment (prevents XSS)
+element.textContent = userInput; // use instead of innerHTML
+
+// Secure Cookie settings (Server Header syntax)
+Set-Cookie: session_id=xyz; Secure; HttpOnly; SameSite=Strict;
 */
 
 

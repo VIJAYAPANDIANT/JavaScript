@@ -1,7 +1,7 @@
 <!-- 
-==========================================
+=========================================
 TOPIC: Vue.js (Reactivity & Composition API)
-==========================================
+=========================================
 
 Definition:
 Vue.js is a progressive, model-view-viewmodel JavaScript framework for building user interfaces.
@@ -11,6 +11,31 @@ using imported functions instead of declaring options (Options API).
 Key Features:
 1. Single File Components (SFC): Formatted as template, script, and style blocks in a single file.
 2. Reactivity: Enabled via reactive utilities like `ref` and `reactive`.
+
+=========================================
+SYNTAX REFERENCE
+=========================================
+<!-- Template interpolation and directives -->
+<template>
+  <button @click="incrementCount">{{ count }}</button>
+</template>
+
+<script setup>
+import { ref, reactive, computed, onMounted } from 'vue';
+
+// Reactive primitive/object reference
+const count = ref(0); // accessed as count.value inside script
+
+// Reactive Object
+const state = reactive({ key: 'value' });
+
+// Computed property
+const doubleCount = computed(() => count.value * 2);
+
+function incrementCount() {
+  count.value++;
+}
+</script>
 -->
 
 <template>

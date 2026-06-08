@@ -11,6 +11,33 @@ Patterns Covered:
 1. Singleton Pattern (Restricts class instantiation to a single object instance)
 2. Factory Pattern (Interface for creating objects without specifying their exact class)
 3. Observer Pattern (Subscription model to notify multiple objects of state changes)
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Singleton
+class Singleton {
+    constructor() {
+        if (Singleton.instance) return Singleton.instance;
+        Singleton.instance = this;
+    }
+}
+
+// Factory Method
+class Factory {
+    static create(type) {
+        if (type === "A") return new ProductA();
+        if (type === "B") return new ProductB();
+    }
+}
+
+// Observer Pattern
+class Subject {
+    constructor() { this.observers = []; }
+    subscribe(fn) { this.observers.push(fn); }
+    unsubscribe(fn) { this.observers = this.observers.filter(o => o !== fn); }
+    notify(data) { this.observers.forEach(o => o(data)); }
+}
 */
 
 

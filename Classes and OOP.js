@@ -29,6 +29,38 @@ In JavaScript:
    method call in their own unique way (e.g., overriding inherited parent methods).
 4. Abstraction: Hiding complex implementation details and showing only the essential 
    features to the user.
+
+================================================================================
+3. SYNTAX REFERENCE
+================================================================================
+// Basic Class Declaration
+class ClassName {
+    // Private property declaration
+    #privateProp;
+
+    constructor(arg1, arg2) {
+        this.publicProp = arg1;
+        this.#privateProp = arg2;
+    }
+
+    // Public method
+    methodName() { ... }
+
+    // Static method
+    static helper() { ... }
+
+    // Getter & Setter
+    get value() { return this.#privateProp; }
+    set value(val) { this.#privateProp = val; }
+}
+
+// Inheritance
+class ChildClass extends ParentClass {
+    constructor(parentArg, childArg) {
+        super(parentArg); // calls parent constructor
+        this.childProp = childArg;
+    }
+}
 */
 
 

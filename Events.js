@@ -11,6 +11,32 @@ Key Concepts:
 1. Event Listeners
 2. Event Bubbling (and Capturing)
 3. Event Delegation
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Add event listener
+element.addEventListener(eventType, handlerFunction, useCapture);
+
+// Remove event listener (requires named function reference)
+element.removeEventListener(eventType, handlerFunction);
+
+// Stop Event Bubbling (propagation)
+element.addEventListener("click", (event) => {
+    event.stopPropagation();
+});
+
+// Prevent Default Browser Action (e.g., form submission, link click)
+element.addEventListener("submit", (event) => {
+    event.preventDefault();
+});
+
+// Event Delegation (listening on parent)
+parentElement.addEventListener("click", (event) => {
+    if (event.target.matches(".child-selector")) {
+        // handle event
+    }
+});
 */
 
 

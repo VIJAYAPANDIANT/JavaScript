@@ -12,6 +12,37 @@ Key Techniques:
 1. Debouncing (Grouping multiple sequential calls into a single call after a delay)
 2. Memoization (Caching the results of expensive function calls)
 3. Lazy Loading (Delaying the initialization/loading of resources until needed)
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Basic Debounce Implementation
+function debounce(func, delay) {
+    let timer;
+    return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => func(...args), delay);
+    };
+}
+
+// Basic Memoization Cache Pattern
+function memoize(fn) {
+    const cache = new Map();
+    return (...args) => {
+        const key = JSON.stringify(args);
+        if (cache.has(key)) return cache.get(key);
+        const result = fn(...args);
+        cache.set(key, result);
+        return result;
+    };
+}
+
+// Dynamic Imports (Lazy Loading Modules)
+button.addEventListener("click", () => {
+    import("./module.js").then((module) => {
+        module.runFunc();
+    });
+});
 */
 
 

@@ -16,6 +16,29 @@ Types of Operators:
 6. Ternary (Conditional) Operator (Shorthand for if-else statement)
 7. String Operators (Operators used specifically for string manipulation)
 8. Type Operators (Verify or convert types of data)
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Arithmetic
+let sum = a + b; let diff = a - b; let prod = a * b; let quotient = a / b;
+let remainder = a % b; let power = a ** b; a++; a--;
+
+// Assignment
+a = b; a += b; a -= b; a *= b; a /= b; a %= b; a **= b;
+
+// Comparison
+a == b; a === b; a != b; a !== b; a > b; a < b; a >= b; a <= b;
+
+// Logical
+a && b; a || b; !a;
+
+// Ternary
+let result = condition ? valIfTrue : valIfFalse;
+
+// Type Operators
+typeof operand;
+object instanceof constructor;
 */
 
 

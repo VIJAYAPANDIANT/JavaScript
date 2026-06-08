@@ -11,6 +11,28 @@ Core Concepts:
 1. JSX (JavaScript XML): Syntactic extension allowing HTML to be written inside JavaScript.
 2. State: Reactive data structure holding component information that triggers re-renders on change.
 3. React Hooks (introduced in v16.8): Functions allowing functional components to tap into state and lifecycle events.
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Component Declaration
+function MyComponent({ prop1 }) {
+    // State hook
+    const [state, setState] = useState(initialValue);
+
+    // Effect hook
+    useEffect(() => {
+        // Side effect logic
+        return () => { /* cleanup */ };
+    }, [dependencies]);
+
+    return (
+        <div className="container" onClick={() => setState(state + 1)}>
+            <h1>{prop1}</h1>
+            <p>State: {state}</p>
+        </div>
+    );
+}
 */
 
 // Simulated React import for IDE type awareness

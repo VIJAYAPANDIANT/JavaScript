@@ -13,6 +13,22 @@ Why use comments?
 1. Explaining code logic to fellow developers (and your future self).
 2. Temporarily disabling code blocks during debugging.
 3. Generating automatic API documentation (using structured formats like JSDoc).
+
+================================================================================
+2. SYNTAX REFERENCE
+================================================================================
+// Single-line comment syntax
+
+/* 
+   Multi-line
+   block comment syntax
+*/
+
+/**
+ * JSDoc / Documentation comment syntax
+ * @param {type} paramName - parameter description
+ * @returns {type} description
+ */
 */
 
 

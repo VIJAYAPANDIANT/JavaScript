@@ -11,6 +11,22 @@ Key Mechanisms:
 1. localStorage: Stores data with no expiration date. Data persists even when the browser is closed.
 2. sessionStorage: Stores data for the duration of the page session (data is lost when tab is closed).
 3. Cookies: Small text files stored in the browser, sent automatically with HTTP requests to the server.
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// localStorage & sessionStorage APIs
+storage.setItem(key, stringValue);
+const value = storage.getItem(key);
+storage.removeItem(key);
+storage.clear();
+
+// Storing objects/arrays
+localStorage.setItem(key, JSON.stringify(object));
+const obj = JSON.parse(localStorage.getItem(key));
+
+// Cookies
+document.cookie = "key=value; max-age=seconds; path=/; SameSite=Strict; Secure";
 */
 
 

@@ -13,6 +13,26 @@ Key Strategies:
 1. SSR (Server-Side Rendering): HTML is generated on the server for EVERY incoming request.
 2. SSG (Static Site Generation): HTML is compiled once during the build process, serving static pages instantly.
 3. File-based Routing: Pages are automatically mapped to URLs based on your directory layout.
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Next.js (App Router Server Page)
+export default async function Page({ params }) {
+    const { id } = await params;
+    const res = await fetch(`https://api.example.com/item/${id}`);
+    const data = await res.json();
+    return <div>{data.name}</div>;
+}
+
+// Nuxt.js Page (useFetch composition)
+<script setup>
+const route = useRoute();
+const { data: item } = await useFetch(`/api/item/${route.params.id}`);
+</script>
+<template>
+  <div>{{ item.name }}</div>
+</template>
 */
 
 

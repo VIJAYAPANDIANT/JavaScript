@@ -12,6 +12,22 @@ Definition:
    A closure is the combination of a function bundled together (enclosed) with references to its surrounding state 
    (the lexical environment). In other words, a closure gives an inner function access to the outer function's scope 
    even after the outer function has finished executing.
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Basic Closure Pattern
+function outer(outerArg) {
+    let outerVar = "value";
+    return function inner(innerArg) {
+        // Accesses outerArg and outerVar from outer scope
+        return outerVar + outerArg + innerArg;
+    };
+}
+
+// Instantiate closure
+const closureInstance = outer("arg1");
+closureInstance("arg2"); // invokes inner function with access to "value" and "arg1"
 */
 
 

@@ -11,6 +11,25 @@ Key Testing Concepts:
 1. Unit Testing: Testing individual functions or modules in isolation.
 2. TDD (Test Driven Development): A design methodology where you write tests BEFORE writing code.
 3. Test Runners: Jest (classic, popular framework) and Vitest (modern, fast framework built for Vite).
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Writing a test suite (describe) and test case (test / it)
+describe("TestSuiteName", () => {
+    test("TestCaseName", () => {
+        expect(actualValue).toBe(expectedValue);
+    });
+});
+
+// Common Assertions
+expect(value).toBe(expected);        // Strict equality (===)
+expect(object).toEqual(expected);    // Deep structural equality
+expect(value).toBeNull();
+expect(value).toBeTruthy();
+expect(value).toBeFalsy();
+expect(arrayOrString).toContain(item);
+expect(() => { fn(); }).toThrow(errorClassOrMessage);
 */
 
 

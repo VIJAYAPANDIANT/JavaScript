@@ -11,6 +11,31 @@ Key APIs:
 1. Geolocation API: Requests device location coordinates.
 2. Canvas API: Renders 2D graphic shapes, text, images, and animations via scripting.
 3. Web Workers: Spawns background threads to run heavy computations without freezing the browser UI.
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Geolocation API
+navigator.geolocation.getCurrentPosition(successCallback, errorCallback, options);
+
+// Canvas 2D Context setup
+const ctx = canvas.getContext("2d");
+ctx.fillRect(x, y, width, height);
+ctx.beginPath();
+ctx.moveTo(x1, y1);
+ctx.lineTo(x2, y2);
+ctx.stroke();
+
+// Web Workers (Main Thread)
+const worker = new Worker("worker.js");
+worker.postMessage(data);
+worker.onmessage = (event) => { console.log(event.data); };
+
+// Web Workers (Worker Thread - worker.js)
+self.onmessage = (event) => {
+    // perform calculation
+    self.postMessage(result);
+};
 */
 
 

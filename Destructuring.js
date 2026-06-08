@@ -8,6 +8,23 @@ Definition:
    into distinct variables.
 2. Spread Operator (...): Unpacks elements of an array or properties of an object.
 3. Rest Parameter (...): Bundles multiple elements/arguments into a single array.
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Array Destructuring
+const [item1, item2, ...restItems] = array;
+const [firstItem, , thirdItem] = array; // skipping second item
+
+// Object Destructuring
+const { key1, key2: customName, key3 = defaultValue } = object;
+
+// Spread Operator
+const newArr = [...oldArr, newItem];
+const newObj = { ...oldObj, newKey: value };
+
+// Rest Parameter
+function funcName(param1, ...remainingParamsArray) { ... }
 */
 
 

@@ -15,6 +15,24 @@ There are two types of conversion in JavaScript:
 2. Explicit Conversion (Type Casting): 
    The developer manually converts a type using built-in methods/constructors 
    (like Number(), String(), Boolean(), parseInt()).
+
+================================================================================
+2. SYNTAX REFERENCE
+================================================================================
+// Explicit Casting to Number
+Number(value);
+parseInt(value);
+parseFloat(value);
+
+// Explicit Casting to String
+String(value);
+value.toString();
+
+// Explicit Casting to Boolean
+Boolean(value);
+
+// Checking for NaN
+isNaN(value);
 */
 
 

@@ -11,6 +11,46 @@ Types of Control Flow Structures:
 1. Conditional Statements (Decision Making: if, else if, else, switch)
 2. Loops (Repetitive Execution: for, while, do-while)
 3. Control Statements (Altering loops: break, continue)
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Conditional Statement
+if (condition1) {
+    // code
+} else if (condition2) {
+    // code
+} else {
+    // code
+}
+
+// Switch Statement
+switch (expression) {
+    case value1:
+        // code
+        break;
+    default:
+        // code
+}
+
+// For Loop
+for (initialization; condition; afterthought) {
+    // code
+}
+
+// While Loop
+while (condition) {
+    // code
+}
+
+// Do-While Loop
+do {
+    // code
+} while (condition);
+
+// Control statements
+break;
+continue;
 */
 
 

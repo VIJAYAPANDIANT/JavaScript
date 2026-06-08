@@ -20,6 +20,17 @@ Execution Priority Rule:
 2. If the Call Stack is empty, execute ALL callbacks in the Microtask Queue first.
 3. Once the Microtask Queue is completely clear, execute the FIRST callback in the Callback (Macrotask) Queue.
 4. Repeat.
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Queueing a Macrotask
+setTimeout(() => { /* callback logic */ }, delayMs);
+setInterval(() => { /* callback logic */ }, intervalMs);
+
+// Queueing a Microtask
+Promise.resolve().then(() => { /* callback logic */ });
+queueMicrotask(() => { /* callback logic */ });
 */
 
 

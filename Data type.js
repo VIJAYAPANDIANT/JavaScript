@@ -32,6 +32,26 @@ JavaScript values are divided into two main categories:
 1. Object: Collections of key-value pairs.
 2. Array: Ordered lists of values (technically a special type of Object).
 3. Function: Callable code blocks (technically objects with executable code).
+
+================================================================================
+4. SYNTAX REFERENCE
+================================================================================
+// Checking data type of a value
+typeof value;
+
+// Declaring Primitive Types
+let num = 42;               // Number
+let str = "Hello";          // String
+let active = true;          // Boolean
+let empty = null;           // Null
+let undef;                  // Undefined (value is undefined)
+let sym = Symbol("id");     // Symbol
+let bigInt = 1234567890n;   // BigInt (ends with n)
+
+// Declaring Non-Primitive Types
+let obj = { key: "value" }; // Object
+let arr = [1, 2, 3];        // Array
+let fn = () => {};          // Function
 */
 
 

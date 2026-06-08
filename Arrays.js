@@ -12,6 +12,33 @@ Common Operations:
 2. Modifying elements (push, pop, shift, unshift)
 3. Iteration & Searching (forEach, indexOf, includes)
 4. Advanced Array Methods (map, filter, reduce)
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Creation
+let arr = [element1, element2, ...];
+
+// Accessing & Mutating by Index
+let first = arr[0];
+arr[1] = newValue;
+
+// Length property
+let len = arr.length;
+
+// Stack/Queue Operations
+arr.push(value);     // add to end
+let last = arr.pop(); // remove from end
+let firstVal = arr.shift(); // remove from beginning
+arr.unshift(value);   // add to beginning
+
+// Iteration
+arr.forEach((item, index, array) => { ... });
+
+// Transformations & Accumulations
+let mapped = arr.map((item, index) => newValue);
+let filtered = arr.filter((item, index) => condition);
+let reduced = arr.reduce((accumulator, currentValue) => nextAccumulator, initialValue);
 */
 
 

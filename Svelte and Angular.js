@@ -16,6 +16,26 @@ approaches to building modern web applications.
    Developed by Google, Angular is a robust, opinionated, TypeScript-based framework designed for 
    building enterprise-scale applications. It provides a full set of built-in features including 
    routing, forms validation, dependency injection, and HTTP requests out of the box.
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Svelte syntax
+<script>
+  let count = 0; // State is reactive by assignment
+  $: doubled = count * 2; // Reactive statement
+</script>
+<button on:click={() => count++}>{count}</button>
+
+// Angular syntax
+@Component({
+  selector: 'app-root',
+  template: `<button (click)="increment()">{{ count }}</button>`
+})
+export class AppComponent {
+  count = 0;
+  increment() { this.count++; }
+}
 */
 
 

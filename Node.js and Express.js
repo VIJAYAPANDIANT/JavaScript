@@ -13,6 +13,28 @@ Key Server Operations:
 1. Listening for HTTP Requests
 2. Handling routes (GET, POST, etc.)
 3. Working with middleware (e.g., body parsing, logging)
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Import and initialization (CommonJS)
+const express = require("express");
+const app = express();
+
+// JSON Middleware
+app.use(express.json());
+
+// Routes
+app.get("/route", (req, res) => {
+    res.status(200).json(data);
+});
+app.post("/route", (req, res) => {
+    const body = req.body;
+    res.status(201).json(body);
+});
+
+// Listening
+app.listen(port, () => { console.log(`Running on port ${port}`); });
 */
 
 // Simulated module imports for IDE awareness

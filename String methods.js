@@ -13,6 +13,32 @@ Key Features & Methods:
 2. Extracting Parts of Strings (slice, substring, substr)
 3. Splitting & Joining Strings (split)
 4. Other essential methods (toLowerCase, toUpperCase, replace, trim, includes)
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Template Literals
+let str = `Hello ${variable} - Value: ${expression}`;
+
+// Extraction
+str.slice(start, end);
+str.substring(start, end);
+
+// Conversion to Array
+str.split(separator);
+
+// Querying & Checking
+str.includes(searchString);
+str.indexOf(searchValue);
+str.startsWith(searchString);
+str.endsWith(searchString);
+
+// Utilities
+str.trim();
+str.toLowerCase();
+str.toUpperCase();
+str.replace(searchValue, replaceValue);
+str.replaceAll(searchValue, replaceValue);
 */
 
 

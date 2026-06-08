@@ -11,6 +11,31 @@ Definition:
 
 2. Generators: Special functions that can be paused and resumed, allowing them to yield multiple values over time.
    They are written using the `function*` syntax and use the `yield` keyword.
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Generator Declaration
+function* generatorName() {
+    yield value1;
+    yield value2;
+    return finalValue;
+}
+
+// Generator Instantiation & Consumption
+const gen = generatorName();
+gen.next(); // returns { value: value1, done: false }
+
+// Custom Iterable Object
+const iterableObj = {
+    [Symbol.iterator]() {
+        return {
+            next() {
+                return { value: nextVal, done: isDone };
+            }
+        };
+    }
+};
 */
 
 

@@ -13,6 +13,28 @@ Common Topics:
 2. Modifying Properties (Add, Edit, Delete)
 3. Object Methods (Functions inside objects)
 4. Object Keys, Values, and Entries
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Creation
+let obj = {
+    key1: value1,
+    key2: value2,
+    methodName() { ... }
+};
+
+// Accessing properties
+obj.key1;       // Dot notation
+obj["key1"];    // Bracket notation
+
+// Deleting properties
+delete obj.key1;
+
+// Object utility methods
+Object.keys(obj);    // Returns array of keys
+Object.values(obj);  // Returns array of values
+Object.entries(obj); // Returns array of [key, value] pairs
 */
 
 

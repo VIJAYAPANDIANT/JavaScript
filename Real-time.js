@@ -11,6 +11,22 @@ we need persistent connections where the server can push updates to the client i
 Core Technologies:
 1. WebSockets: Two-way (bi-directional), full-duplex communication over a single TCP connection.
 2. Server-Sent Events (SSE): One-way (uni-directional), server-to-client streaming over standard HTTP.
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// WebSockets (Client-side)
+const ws = new WebSocket("wss://example.com/socket");
+ws.send(JSON.stringify(payload));
+ws.onmessage = (event) => { const data = JSON.parse(event.data); };
+ws.onopen = (event) => { console.log("Connected"); };
+ws.onclose = (event) => { console.log("Closed"); };
+
+// Server-Sent Events (Client-side)
+const sse = new EventSource("/sse-endpoint");
+sse.onmessage = (event) => { const data = JSON.parse(event.data); };
+sse.addEventListener("customEvent", (event) => { ... });
+sse.close();
 */
 
 

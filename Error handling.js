@@ -14,6 +14,30 @@ Core Statements:
 2. catch - Code block executed if an error occurs in the try block
 3. finally - Code block executed after try and catch, regardless of the result
 4. throw - Statement used to create/throw custom errors
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Basic try-catch structure
+try {
+    // Code that might throw an error
+} catch (error) {
+    // Code to execute if an error occurs
+    console.error(error.name, error.message);
+}
+
+// Complete try-catch-finally structure
+try {
+    // Code
+} catch (error) {
+    // Error handling
+} finally {
+    // Cleanup code (always runs)
+}
+
+// Throwing a custom error
+throw new Error("Custom error message");
+throw new TypeError("Type mismatch error");
 */
 
 

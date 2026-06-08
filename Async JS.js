@@ -11,6 +11,36 @@ Asynchronous JS lets us kick off a task, continue running other code, and handle
 Core Asynchronous Patterns:
 1. Promises (resolve, reject, then, catch, finally)
 2. Async/Await (modern, synchronous-looking shorthand for handling Promises)
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Creating a Promise
+const myPromise = new Promise((resolve, reject) => {
+    if (success) {
+        resolve(data);
+    } else {
+        reject(error);
+    }
+});
+
+// Consuming a Promise
+myPromise
+    .then(result => { ... })
+    .catch(err => { ... })
+    .finally(() => { ... });
+
+// Async/Await Pattern
+async function runTask() {
+    try {
+        const result = await myPromise;
+        // do something with result
+    } catch (err) {
+        // handle error
+    } finally {
+        // run cleanup
+    }
+}
 */
 
 

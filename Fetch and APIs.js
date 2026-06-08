@@ -9,6 +9,34 @@ Most modern web applications interact with backend servers. This communication i
    It uses standard HTTP methods: GET (read), POST (create), PUT (update), DELETE (delete).
 2. JSON (JavaScript Object Notation) is the lightweight format used for exchanging data.
 3. Fetch API is a built-in browser interface that allows us to make HTTP requests.
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// JSON Conversion
+const obj = JSON.parse(jsonString);
+const jsonString = JSON.stringify(obj);
+
+// Fetch GET Request
+fetch(url)
+    .then(response => {
+        if (!response.ok) throw new Error("HTTP error: " + response.status);
+        return response.json();
+    })
+    .then(data => { ... })
+    .catch(error => { ... });
+
+// Fetch POST/PUT/DELETE Request
+fetch(url, {
+    method: "POST", // "PUT", "DELETE", etc.
+    headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer token"
+    },
+    body: JSON.stringify(dataPayload)
+})
+.then(response => response.json())
+.then(result => { ... });
 */
 
 

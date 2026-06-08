@@ -12,6 +12,25 @@ Rules of 'this' Binding:
 2. Implicit Binding (When a function is called as a method of an object)
 3. New Binding (When a function is called as a constructor using 'new')
 4. Explicit Binding (Using call(), apply(), and bind() to manually set 'this')
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Explicit Binding
+// 1. call: passes arguments individually
+fn.call(thisArg, arg1, arg2, ...);
+
+// 2. apply: passes arguments as an array
+fn.apply(thisArg, [arg1, arg2, ...]);
+
+// 3. bind: returns a new function with bound context
+const boundFn = fn.bind(thisArg, arg1, arg2, ...);
+
+// New Binding (constructor)
+function Person(name) {
+    this.name = name;
+}
+const p = new Person("Vijay");
 */
 
 

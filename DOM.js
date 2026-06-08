@@ -12,6 +12,34 @@ Core Areas:
 1. Selecting Elements
 2. Creating Elements
 3. Modifying Elements (Content, Attributes, Styles)
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Selecting
+document.querySelector(selector);
+document.querySelectorAll(selector);
+document.getElementById(id);
+document.getElementsByClassName(className);
+
+// Creating & Appending
+let el = document.createElement(tagName);
+parentElement.appendChild(el);
+parentElement.removeChild(el);
+
+// Modifying Content
+el.textContent = "text";
+el.innerHTML = "<span>html</span>";
+
+// Attributes & Classes
+el.setAttribute(name, value);
+el.getAttribute(name);
+el.classList.add(className);
+el.classList.remove(className);
+el.classList.toggle(className);
+
+// CSS inline styles
+el.style.styleProperty = "value"; // e.g. el.style.color = "red";
 */
 
 

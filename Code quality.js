@@ -11,6 +11,29 @@ Key Tools:
 1. ESLint (Linter: catches syntax mistakes, logical bugs, and style issues)
 2. Prettier (Formatter: formats code styling - indentation, spacing, quotes)
 3. Husky (Git Hooks manager: runs linters and formatters before permitting git commits)
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// ESLint configuration format (eslint.config.js)
+export default [
+    {
+        rules: {
+            "semi": ["error", "always"],
+            "quotes": ["error", "double"]
+        }
+    }
+];
+
+// Prettier configuration format (.prettierrc)
+{
+  "semi": true,
+  "singleQuote": false
+}
+
+// Running quality checks from CLI
+npx eslint .
+npx prettier --write .
 */
 
 

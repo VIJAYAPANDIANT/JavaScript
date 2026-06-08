@@ -12,6 +12,32 @@ Types of Functions:
 2. Function Expression (Anonymous function assigned to a variable)
 3. Arrow Function (Shorthand syntax introduced in ES6)
 4. IIFE (Immediately Invoked Function Expression)
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Function Declaration
+function functionName(param1, param2) {
+    return value;
+}
+
+// Function Expression
+const expressionName = function(param1, param2) {
+    return value;
+};
+
+// Arrow Function (standard)
+const arrowName = (param1, param2) => {
+    return value;
+};
+
+// Arrow Function (implicit return)
+const implicitReturn = (param1) => expression;
+
+// IIFE (Immediately Invoked Function Expression)
+(function() {
+    // code
+})();
 */
 
 

@@ -18,7 +18,19 @@ Key Characteristics of JavaScript:
 - Multi-paradigm: Supports functional, imperative, and object-oriented programming.
 
 ================================================================================
-2. HISTORICAL TIMELINE
+2. SYNTAX REFERENCE
+================================================================================
+// Printing values to console
+console.log(value1, value2, ...);
+
+// Embedding script in HTML
+<script src="filename.js"></script>
+
+// Executing JS via Node.js CLI
+node filename.js
+
+================================================================================
+3. HISTORICAL TIMELINE
 ================================================================================
 - 1995: Created by Brendan Eich at Netscape in 10 days, originally named Mocha, then LiveScript, and finally JavaScript.
 - 1997: Standardized under ECMAScript (ES) to ensure cross-browser compatibility.

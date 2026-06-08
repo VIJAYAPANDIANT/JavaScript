@@ -12,6 +12,25 @@ Featured Libraries:
 1. Redux (Toolkit): The industry-standard library, structured with strict patterns (actions, reducers).
 2. Zustand: A modern, minimalist, hook-based state management library for React.
 3. Pinia: The official, lightweight Vue 3 state management library (replacing Vuex).
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Zustand Store setup and usage (React)
+import { create } from "zustand";
+const useStore = create((set) => ({
+    count: 0,
+    increment: () => set((state) => ({ count: state.count + 1 }))
+}));
+const { count, increment } = useStore();
+
+// Pinia Store setup (Vue)
+import { defineStore } from "pinia";
+export const useCounterStore = defineStore("counter", () => {
+    const count = ref(0);
+    const increment = () => count.value++;
+    return { count, increment };
+});
 */
 
 

@@ -12,6 +12,27 @@ Three Core Pillars of a PWA:
 1. Manifest File (webmanifest: defines installation meta, icons, theme colors)
 2. HTTPS (security requirement for running Service Workers)
 3. Service Worker (a background script running independently of the web page to intercept network requests)
+
+================================================================================
+SYNTAX REFERENCE
+================================================================================
+// Main Thread Registration
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/sw.js");
+}
+
+// Service Worker Thread Event Listeners (sw.js)
+self.addEventListener("install", (event) => {
+    event.waitUntil(
+        caches.open("cache-name").then(cache => cache.addAll(["/index.html"]))
+    );
+});
+
+self.addEventListener("fetch", (event) => {
+    event.respondWith(
+        caches.match(event.request).then(response => response || fetch(event.request))
+    );
+});
 */
 
 
