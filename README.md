@@ -1,7 +1,4 @@
-<div align="center">
-  <img src="logo.png" alt="JavaScript Learning Path & Roadmap Logo" width="600">
-  <h1>JavaScript Learning Path & Roadmap</h1>
-</div>
+# JavaScript Learning Path & Roadmap
 
 ## 📖 Overview
 Welcome to the **JavaScript Learning Path & Roadmap**! This repository is a comprehensive, structured set of hands-on lessons, reference scripts, and conceptual blueprints designed to take you from foundational syntax to advanced architectural patterns.
