@@ -1,102 +1,111 @@
-//Primitive Data Type
+// ==========================================
+// TOPIC: Data Types in JavaScript
+// ==========================================
 
-//Primitive data type is a data type that is not an object. It is a single value.
+/*
+================================================================================
+1. DEEP DEFINITION
+================================================================================
+Data types describe the characteristics and behavior of a value. In JavaScript, 
+values are typed, not the variables themselves (since JS is dynamically typed).
+Variables can hold values of any type at any point.
 
-//There are 7 primitive data types in JavaScript.It is immutable.It is not changeable.
+JavaScript values are divided into two main categories:
+1. Primitive Data Types: Stored directly by value in the Stack. They are immutable 
+   (cannot be changed once created).
+2. Non-Primitive (Reference) Data Types: Stored as references in the Heap. They are mutable.
+
+================================================================================
+2. PRIMITIVE DATA TYPES (7 Types)
+================================================================================
+1. Number: Represent double-precision 64-bit binary format IEEE 754 values (integers, floats, NaN, Infinity).
+2. String: Character sequences representing textual data.
+3. Boolean: Logical entity having only two values: `true` and `false`.
+4. Undefined: Value automatically assigned to a variable that has been declared but not initialized.
+5. Null: Intentional absence of any object value.
+6. Symbol: A unique and immutable primitive value, often used as unique object keys.
+7. BigInt: Represent integers with arbitrary precision (larger than 2^53 - 1).
+
+================================================================================
+3. NON-PRIMITIVE DATA TYPES (Reference Types)
+================================================================================
+1. Object: Collections of key-value pairs.
+2. Array: Ordered lists of values (technically a special type of Object).
+3. Function: Callable code blocks (technically objects with executable code).
+*/
 
 
-//1. Number
+// ==========================================
+// 1. Primitive Types Demo
+// ==========================================
+console.log("=== 1. PRIMITIVE DATA TYPES ===");
 
-//Number is a data type that is used to store numbers. It is a floating-point number.
+// Number
+let num = 42;
+let pi = 3.14159;
+console.log(`Number values: ${num}, ${pi}`); // Output: 42, 3.14159
 
-var a=10;
-console.log(a);  //10
+// String
+let name = "Vijay";
+console.log(`String value: ${name}`); // Output: Vijay
 
-//2. String
+// Boolean
+let isCoding = true;
+console.log(`Boolean value: ${isCoding}`); // Output: true
 
-//String is a data type that is used to store strings. It is a sequence of characters.
+// Undefined
+let notAssigned;
+console.log(`Undefined value: ${notAssigned}`); // Output: undefined
 
-var b="Hello World";
-console.log(b);  //Hello World
+// Null
+let emptyValue = null;
+console.log(`Null value: ${emptyValue}`); // Output: null
 
-let i="vj123@gmail.com";
-console.log(i);  //vj123@gmail.com
+// Symbol (Always guarantees uniqueness)
+let sym1 = Symbol("id");
+let sym2 = Symbol("id");
+console.log(`Symbols are unique: ${sym1 === sym2}`); // Output: false
 
-//3. Boolean
+// BigInt (Appended with 'n')
+let bigIntNum = 9007199254740991n;
+console.log(`BigInt: ${bigIntNum}`); // Output: 9007199254740991n
 
-//Boolean is a data type that is used to store boolean values. It is a true or false value.
 
-var c=true;
-console.log(c);  //true
+// ==========================================
+// 2. Reference Types Demo & Mutability
+// ==========================================
+console.log("\n=== 2. REFERENCE DATA TYPES (MUTABILITY) ===");
 
-//4. Undefined
+// Object
+let user = { username: "vj123", role: "Admin" };
 
-//Undefined is a data type that is used to store undefined values. It is a value that is not defined.
+// Arrays
+let scores = [90, 85, 95];
 
-var d;
-console.log(d);  //undefined
+// Demonstration of Referencing (Heap storage)
+let secondaryUser = user; // Points to the same object reference in memory
+secondaryUser.role = "SuperAdmin"; // Mutating via reference
 
-//5. Null
+console.log(user.role); 
+// Output: SuperAdmin (The original object is changed because it is shared!)
 
-//Null is a data type that is used to store null values. It is a value that is not defined.
 
-var e=null;
-console.log(e);  //null
+// ==========================================
+// 3. The 'typeof' Operator & JS Quirks
+// ==========================================
+// Used to inspect the type of a value.
 
-//6. Symbol
+console.log("\n=== 3. TYPE OF OPERATOR & QUIRKS ===");
 
-//Symbol is a data type that is used to store symbol values. It is a unique value.
+console.log(typeof 100);        // Output: "number"
+console.log(typeof "Text");     // Output: "string"
+console.log(typeof true);       // Output: "boolean"
+console.log(typeof undefined);  // Output: "undefined"
+console.log(typeof Symbol());   // Output: "symbol"
+console.log(typeof 10n);        // Output: "bigint"
+console.log(typeof [1, 2]);     // Output: "object" (Arrays are sub-types of objects)
+console.log(typeof (() => {})); // Output: "function"
 
-var f=Symbol("Hello");
-console.log(f);  //Symbol(Hello)
-
-//7. BigInt
-
-//BigInt is a data type that is used to store big integer values. It is a integer value.
-
-var g=BigInt(1234567890123456789012345678901234567890);
-console.log(g);  //1234567890123456789012345678901234567890n
-
-//Non-Primitive Data Type 
-
-//Non-primitive data type is a data type that is an object. It is not a single value.
-
-//There are 3 non-primitive data types in JavaScript.It is mutable.It is changeable.    
-
-//1. Object
-
-//Object is a data type that is used to store object values. It is a collection of key-value pairs.
-
-var h={name:"John", age:30};
-console.log(h);  // {name: "John", age: 30}
-
-//2. Array
-
-//Array is a data type that is used to store array values. It is a collection of values.
-
-var j=[1,2,3,4,5];
-console.log(j);  //1,2,3,4,5
-
-//3. Function
-
-//Function is a data type that is used to store function values. It is a collection of statements.
-
-var k=function(){
-    console.log("Hello");
-}
-console.log(k);  //Hello
-
-//typeof operator
-
-//typeof operator is used to find the data type of a variable.
-
-console.log(typeof a);  //number
-console.log(typeof b);  //string
-console.log(typeof c);  //boolean
-console.log(typeof d);  //undefined
-console.log(typeof e);  //object
-console.log(typeof f);  //symbol
-console.log(typeof g);  //bigint
-console.log(typeof h);  //object
-console.log(typeof j);  //object
-console.log(typeof k);  //function  
+// JS Quirk: typeof null returns "object". This is a historical bug in JavaScript, 
+// kept for backward compatibility.
+console.log(typeof null);       // Output: "object"

@@ -1,30 +1,100 @@
-<!--Alert-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alert</title>
+    <title>Browser Dialogs: Alert, Prompt, & Confirm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #0076d6;
+        }
+        code {
+            background-color: #e8eaed;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 1.1em;
+        }
+        button {
+            background-color: #0076d6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+        .box {
+            background-color: #fff;
+            border-left: 5px solid #0076d6;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+    </style>
 </head>
 <body>
+
+    <h1>Browser Interaction: alert(), prompt(), confirm()</h1>
+    <p>JavaScript provides three modal dialog functions that run directly inside the browser environment. These functions are <strong>synchronous</strong> and <strong>blocking</strong>: they pause code execution and prevent the user from interacting with the rest of the page until the dialog box is dismissed.</p>
+
+    <div class="box">
+        <h3>1. Alert Dialog: <code>alert(message)</code></h3>
+        <p>Shows a message dialog box with an "OK" button. It returns no value (returns <code>undefined</code>).</p>
+        <button onclick="runAlert()">Test alert()</button>
+    </div>
+
+    <div class="box">
+        <h3>2. Confirm Dialog: <code>confirm(question)</code></h3>
+        <p>Shows a question with "OK" and "Cancel" buttons. Returns <code>true</code> if OK is clicked, and <code>false</code> if Cancel is clicked.</p>
+        <button onclick="runConfirm()">Test confirm()</button>
+    </div>
+
+    <div class="box">
+        <h3>3. Prompt Dialog: <code>prompt(title, [default])</code></h3>
+        <p>Shows a dialog box with a text input field, an "OK" button, and a "Cancel" button. Returns the entered text (string) if OK is clicked, or <code>null</code> if Cancel is clicked.</p>
+        <button onclick="runPrompt()">Test prompt()</button>
+    </div>
+
     <script>
-      console.log("Hello")
-      console.log("I like pizza")
-      window.alert("This is an alert")
-      window.alert("I like pizza") 
+        // 1. Alert Implementation
+        function runAlert() {
+            console.log("Triggering Alert...");
+            alert("This is an alert box! Click OK to continue.");
+            console.log("Alert dismissed.");
+        }
+
+        // 2. Confirm Implementation
+        function runConfirm() {
+            console.log("Triggering Confirm...");
+            const userChoice = confirm("Do you like coding in JavaScript?");
+            console.log("User clicked confirm choice: " + userChoice); 
+            // Output: true (if OK) or false (if Cancel)
+        }
+
+        // 3. Prompt Implementation
+        function runPrompt() {
+            console.log("Triggering Prompt...");
+            const userName = prompt("Please enter your name:", "Guest");
+            console.log("User entered: " + userName); 
+            // Output: the input string (if OK) or null (if Cancel)
+        }
     </script>
+
 </body>
 </html>
-
-<!--
-
-//It's work only in console not in browser and using console.log is good practice
-
-//using console.log is good practice for debugging
-
-//Using window alert its working html file but not in console
-
-//Using console.log its working console but not in html file
-
--->
