@@ -1,4 +1,4 @@
-# JavaScript Learning Path & Roadmap
+# 🚀 JavaScript Learning Path & Roadmap
 
 ## 📖 Overview
 Welcome to the **JavaScript Learning Path & Roadmap**! This repository is a comprehensive, structured set of hands-on lessons, reference scripts, and conceptual blueprints designed to take you from foundational syntax to advanced architectural patterns.
