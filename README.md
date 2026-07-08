@@ -10,7 +10,7 @@ Each topic on the roadmap is paired with an interactive, fully commented referen
 ## 🎨 Practice Projects
 
 To put these concepts into practice, check out the companion repository:
-👉 **[JavaScript Mini Projects Collection](https://github.com/VIJAYAPANDIANT/JavaScript-Mini-Projects)** - A curated collection of 13 beginner-to-intermediate web applications built with Vanilla JavaScript, HTML5, and CSS3.
+👉 **[JavaScript Mini Projects Collection](https://github.com/VIJAYAPANDIANT/javascript-mini-projects)** - A curated collection of 13 beginner-to-intermediate web applications built with Vanilla JavaScript, HTML5, and CSS3.
 
 ---
 
@@ -143,7 +143,7 @@ System performance, cyber security, coding patterns, JavaScript single-thread ar
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/VIJAYAPANDIANT/JavaScript.git
+   git clone https://github.com/VIJAYAPANDIANT/javascript-learning-path-roadmap.git
    ```
 
 2. **Execute scripts locally in terminal:**
